@@ -1,0 +1,81 @@
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6fa;
+  }
+  
+  .sidebar {
+    width: 320px;
+    height: calc(100vh - 40px);
+    background-color: #0f1b52;
+    color: #F9FAFB;
+    padding: 20px;
+    margin-top: 55px;
+    margin-left: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 18.67px 24.89px -6.22px rgba(16, 24, 40, 0.08), 0px 6.22px 9.33px -3.11px rgba(16, 24, 40, 0.03);
+
+  }
+  
+  .sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    margin-top: 53px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: white;
+    opacity: 0.6;
+    margin: 20px 0;
+  }
+  
+  .logout-divider {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar-menu li:hover {
+    background-color: #02053D;
+    font-weight: 600;
+
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 18px;
+    color:#3B44B2;
+  }
+
+  
+  .neww{
+    font-size: 18px;
+  }
+
+  .row_appointment{
+    width: 20px;
+  }

@@ -1,0 +1,161 @@
+/* Modal overlay to cover the entire screen */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darker background for more focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure modal appears on top */
+}
+
+/* Container for the modal */
+.modal-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+/* Close button styling */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  color: red; /* Red color on hover for close button */
+}
+
+/* Title of the modal */
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Patient name */
+.patient-name {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Room grid layout */
+.room-grid {
+  margin-bottom: 20px;
+}
+
+/* Single row with 10 rooms */
+.room-row-all {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);  /* Ensures 10 rooms in a single row */
+  gap: 15px;
+}
+
+/* Room box styles */
+.room-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-height: 80px;
+  height: auto;
+}
+
+.room-box:hover {
+  transform: scale(1.05); /* Slight zoom on hover for better interactivity */
+}
+
+/* Different room types */
+.ac {
+  background-color: #cceeff; /* Light blue */
+  border-color: #99c2ff;
+}
+
+.non-ac {
+  background-color: #fff6e6; /* Light yellow */
+  border-color: #ffd699;
+}
+
+/* Selected room */
+.selected {
+  background-color: #b6fcb6; /* Soft green */
+  border-color: #66cc66;
+}
+
+/* Occupied room */
+.occupied {
+  background-color: #ffb6b6; /* Soft red */
+  border-color: #ff6666;
+  cursor: not-allowed;
+  opacity: 0.7; /* Slight opacity to indicate it's not selectable */
+}
+
+/* Button styles */
+.assign-button {
+  padding: 12px 20px;
+  background-color: #28a745; /* Green */
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.assign-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .room-row-all {
+    grid-template-columns: repeat(5, 1fr); /* 5 rooms per row on tablets */
+  }
+
+  .modal-container {
+    width: 95%; /* Slightly smaller modal on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .room-row-all {
+    grid-template-columns: repeat(3, 1fr); /* 3 rooms per row on mobile */
+  }
+
+  .room-box {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .assign-button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}

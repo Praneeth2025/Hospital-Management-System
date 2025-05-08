@@ -1,0 +1,121 @@
+/* Ensure the modal overlay takes up the whole screen */
+.modal-overlay {
+    position: fixed;       /* Fixed positioning to stay on top of everything */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    z-index: 999;             /* Ensure it's on top of other content */
+  }
+  
+  /* Modal container to make sure it stays centered */
+  .modal-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 900px; /* Increased from 700px to 900px */
+    margin-bottom: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 100%;  /* Ensures it adapts to the available space while maintaining max-width */
+  }
+  
+  /* Title of the modal */
+  .modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0b0c0c;
+  }
+  
+  /* Group for form fields */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label styles */
+  .form-label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  /* Input field styles */
+  .form-input {
+    width: 95%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  /* Billing items container */
+  .billing-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f4f5ff;
+    border-radius: 10px;
+  }
+  
+  /* Billing input field */
+  .billing-input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width:20%;
+  }
+  
+  /* Button for proceeding */
+  .proceed-button {
+    padding: 10px 20px;
+    background-color: #0b0cce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    transition: background-color 0.3s;
+    margin-right:5px;
+  }
+  
+  .proceed-button:hover {
+    background-color: #0000aa;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .proceed-buttons {
+    padding: 10px 20px;
+    background-color: #d0c7ef50;
+    color: rgb(18, 17, 17);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    transition: background-color 0.3s;
+    margin-right:5px;
+  }
+  
+  .proceed-button:hover {
+    background-color: #0000aa;
+  }
+  

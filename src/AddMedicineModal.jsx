@@ -77,7 +77,7 @@ const AddMedicineModal = ({ isOpen, onClose, selectedPatients, medicines }) => {
     }));
 
     try {
-      await axios.post("http://localhost:3000/medicines/upload", {
+      await axios.post("https://hospital-management-system-backend.onrender.com/medicines/upload", {
         medicines: formattedData,
       });
       setSubmitted(true);

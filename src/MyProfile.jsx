@@ -14,7 +14,7 @@ const MyProfile = () => {
   useEffect(() => {
     const fetchDoctor = async () => {
       try {
-        const res = await fetch('http://localhost:3000/doctors');
+        const res = await fetch('https://hospital-management-system-backend.onrender.com/doctors');
         const data = await res.json();
         const found = data.find(d => d.id === doctorId);
         if (!found) {

@@ -8,7 +8,7 @@ const AddRoomModal = ({ isOpen, onClose, selectedPatients }) => {
 
   useEffect(() => {
     if (isOpen) {
-      axios.get("http://localhost:3000/rooms").then((res) => {
+      axios.get("https://hospital-management-system-backend.onrender.com/rooms").then((res) => {
         setRooms(res.data);
       });
     }
@@ -29,7 +29,7 @@ const AddRoomModal = ({ isOpen, onClose, selectedPatients }) => {
     if (!selectedRoomId || selectedPatients.length === 0) return alert("Select room and patient");
 
     try {
-      const res = await axios.post("http://localhost:3000/rooms/assign", {
+      const res = await axios.post("https://hospital-management-system-backend.onrender.com/rooms/assign", {
         room_id: selectedRoomId,
         patient_id: selectedPatients[0].patient_id,
       });

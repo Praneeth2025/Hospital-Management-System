@@ -39,7 +39,7 @@ const UpdateVitalsModal = ({ isOpen, onClose, selectedPatients }) => {
     console.log("Sending vitals:", dataToSend);
 
     try {
-      await axios.post("http://localhost:3000/vitals/update", dataToSend);
+      await axios.post("https://hospital-management-system-backend.onrender.com/vitals/update", dataToSend);
 
       // Success Alert
       alert("Vitals updated successfully!");

@@ -61,7 +61,7 @@ const AddTestModal = ({ isOpen, onClose, selectedPatients, tests: testOptions = 
     }));
 
     try {
-      await axios.post("http://localhost:3000/tests/upload", { tests: formattedData });
+      await axios.post("https://hospital-management-system-backend.onrender.com/tests/upload", { tests: formattedData });
 
       // ✅ Success Alert
       alert("Tests submitted successfully!");

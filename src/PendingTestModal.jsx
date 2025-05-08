@@ -12,7 +12,7 @@ const PendingTestModal = ({ isOpen, onClose, selectedPatients }) => {
 
         // Fetch tests for all selected patients
         for (const patient of selectedPatients) {
-          const res = await axios.get(`http://localhost:3000/pending-tests/${patient.patient_id}`);
+          const res = await axios.get(`https://hospital-management-system-backend.onrender.com/pending-tests/${patient.patient_id}`);
           allTests.push(...res.data);
         }
 
@@ -73,7 +73,7 @@ const PendingTestModal = ({ isOpen, onClose, selectedPatients }) => {
       }
 
       // Send the updates to the backend
-      await axios.post("http://localhost:3000/update-test-results", {
+      await axios.post("https://hospital-management-system-backend.onrender.com/update-test-results", {
         updates,
         doctorEmails: doctorEmail, // Send one doctor email (common for all selected patients)
       });

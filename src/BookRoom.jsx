@@ -15,8 +15,8 @@ const RoomsAndSchedules = () => {
     const fetchData = async () => {
       try {
         const [schedulesRes, roomsRes] = await Promise.all([
-          axios.get("http://localhost:3000/schedules/completed"),
-          axios.get("http://localhost:3000/rooms"),
+          axios.get("https://hospital-management-system-backend.onrender.com/schedules/completed"),
+          axios.get("https://hospital-management-system-backend.onrender.com/rooms"),
         ]);
         setSchedules(schedulesRes.data);
         setRooms(roomsRes.data);
@@ -50,7 +50,7 @@ const RoomsAndSchedules = () => {
     if (!room) return alert("No room assigned to this patient.");
 
     try {
-      await axios.post("http://localhost:3000/rooms/discharge", {
+      await axios.post("https://hospital-management-system-backend.onrender.com/rooms/discharge", {
         room_id: room.room_id,
         patient_id: selectedPatient.patient_id,
       });

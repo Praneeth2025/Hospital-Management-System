@@ -12,7 +12,7 @@ const DoctorsPage = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await fetch("http://localhost:3000/doctors");
+        const response = await fetch("https://hospital-management-system-backend.onrender.com/doctors");
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

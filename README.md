@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Hospital-Management-System
+A user-friendly Hospital Management System that streamlines patient registration, appointments, billing, Room Booking , Medicines and Tests. It enhances efficiency, data accuracy, and coordination across departments for improved patient care and hospital operations.
+>>>>>>> 04eb245557416835c9f3f04685c59ccff80454e0

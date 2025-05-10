@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Pencil, Trash2, Check } from "lucide-react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Use useNavigate instead of useHistory
-import AddAppointmentPage from "./AddAppointmentPage"; // Import the new full-page component
+import Appointment from "./AddAppointmentPage"; // Renamed from AddAppointmentPage
 
 const ClinicListTable = () => {
   const [clinicData, setClinicData] = useState([]);
@@ -11,8 +10,7 @@ const ClinicListTable = () => {
   const [checkedRows, setCheckedRows] = useState({});
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [selectedPatientId, setSelectedPatientId] = useState(null);
-
-  const navigate = useNavigate(); // Replace useHistory with useNavigate
+  const [showAppointmentForm, setShowAppointmentForm] = useState(false); // New modal control
 
   useEffect(() => {
     const fetchClinicData = async () => {
@@ -69,10 +67,6 @@ const ClinicListTable = () => {
   const filteredData = clinicData.filter((row) =>
     `${row.name} ${row.full_name}`.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const handleAddAppointment = () => {
-    navigate("/add-appointment"); // Use navigate to redirect to the full-page Add Appointment page
-  };
 
   return (
     <div className="p-6 w-full h-screen relative">
@@ -144,7 +138,6 @@ const ClinicListTable = () => {
                       >
                         <Check className="w-4 h-4" />
                       </button>
-                      
                       <Trash2
                         className="w-4 h-4 text-red-500 cursor-pointer"
                         onClick={() => {
@@ -163,7 +156,7 @@ const ClinicListTable = () => {
 
       <div className="absolute bottom-6 right-6 flex gap-4">
         <button
-          onClick={handleAddAppointment} // Navigate to the full-page add appointment
+          onClick={() => setShowAppointmentForm(true)}
           className="text-white px-4 py-2 rounded-md bg-blue-900 shadow-md"
         >
           + New Appointment
@@ -176,6 +169,22 @@ const ClinicListTable = () => {
         </button>
       </div>
 
+      {/* Modal for Appointment Form */}
+      {showAppointmentForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl relative max-h-[90vh] overflow-y-auto">
+            <button
+              onClick={() => setShowAppointmentForm(false)}
+              className="absolute top-3 right-4 text-xl font-bold text-gray-600 hover:text-red-600"
+            >
+              &times;
+            </button>
+            <Appointment />
+          </div>
+        </div>
+      )}
+
+      {/* Modal for Delete Confirmation */}
       {showDeleteModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded shadow-md w-80">

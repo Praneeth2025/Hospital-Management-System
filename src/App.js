@@ -130,7 +130,7 @@ function App() {
                   <>
                     {selectedMenu === 'my_profile' && <MyProfile />}
                     {selectedMenu === 'todays_appointment' && <TodaysAppointment />}
-                    {selectedMenu === 'past_patients' && <PastPatients />}
+                    {selectedMenu === 'past_patients' && <OldPatients />}
                   </>
                 )}
               </>

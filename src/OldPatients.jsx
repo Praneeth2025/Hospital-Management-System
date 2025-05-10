@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
+import PatientDetails from "./PatientDetails"; // import the component
 
 const OldPatients = () => {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
+  const [selectedPatientId, setSelectedPatientId] = useState(null); // new
+  const [showModal, setShowModal] = useState(false); // new
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +27,11 @@ const OldPatients = () => {
   const filteredData = data.filter((row) =>
     `${row.name} ${row.full_name}`.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const handleRowClick = (id) => {
+    setSelectedPatientId(id);
+    setShowModal(true);
+  };
 
   return (
     <div className="p-6 w-full h-screen relative">
@@ -62,15 +69,12 @@ const OldPatients = () => {
             </thead>
             <tbody className="bg-white divide-y divide-gray-100">
               {filteredData.map((row) => (
-                <tr key={row.patient_id} className="hover:bg-gray-50">
-                  <td className="px-6 py-3">
-                    <Link
-                      to={`/patient-details/${row.patient_id}`}
-                      className="text-blue-700 hover:underline"
-                    >
-                      {row.name}
-                    </Link>
-                  </td>
+                <tr
+                  key={row.patient_id}
+                  onClick={() => handleRowClick(row.patient_id)}
+                  className="hover:bg-gray-100 cursor-pointer"
+                >
+                  <td className="px-6 py-3 text-blue-700 underline">{row.name}</td>
                   <td className="px-6 py-3">#{row.patient_id}</td>
                   <td className="px-6 py-3">{new Date(row.schedule_date).toLocaleDateString()}</td>
                   <td className="px-6 py-3">{row.gender}</td>
@@ -85,6 +89,21 @@ const OldPatients = () => {
               ))}
             </tbody>
           </table>
+        </div>
+      )}
+
+      {/* Patient Details Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-2 right-4 text-2xl font-bold text-gray-600 hover:text-red-600"
+            >
+              &times;
+            </button>
+            <PatientDetails patientId={selectedPatientId} />
+          </div>
         </div>
       )}
     </div>

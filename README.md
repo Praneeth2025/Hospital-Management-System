@@ -31,7 +31,7 @@ This web application allows hospitals to efficiently manage patients, doctors, a
 
 * **Frontend**: React.js, Tailwind CSS, React Router
 * **Backend**: Node.js, Express.js (hosted on Render)
-* **Database**: MongoDB (assumed)
+* **Database**: PostgreSQL (Supabase) 
 * **HTTP Client**: Axios
 * **Routing**: React Router DOM
 
@@ -40,29 +40,45 @@ This web application allows hospitals to efficiently manage patients, doctors, a
 ## ✅ Features
 
 ### 👩‍💼 Front Desk Operator
+![image](https://github.com/user-attachments/assets/e5ed58b7-1b19-42fb-a62c-e5b7346ea9ba)
 
-* Handles appointment scheduling
-* Views upcoming and completed appointments
-* Manages patient check-in
-* Search patients by name or doctor
+The Front Desk Operator helps in managing patient appointments and facilitating smooth communication between patients and medical staff. This role involves:
+
+* **Appointment Scheduling** : The front desk operator is responsible for efficiently scheduling patient appointments, ensuring that doctors' and patients' schedules align.
+
+* **Upcoming & Completed Appointments** : They can easily view both upcoming and completed appointments, helping them track the flow of patients and ensure no appointments are missed.
+
+* **Patient Check-in:** On the day of the appointment, the front desk operator manages the patient check-in process, confirming details, and ensuring that all necessary documents are provided.
+
+* **Patient Search:** The operator can search for patients by name or doctor, helping to quickly retrieve relevant information when needed.
+---
 
 ### 🧑‍⚕️ Doctor Panel
+![image](https://github.com/user-attachments/assets/cbd22bfd-0b52-4640-bbba-d9fb1b0de584)
 
-* Views their assigned patients
-* Prescribes medicines with dosage and timing
-* Recommends tests
-* Adds medical notes
-* Views patient history
+* **The Doctor Panel is designed to streamline the work of healthcare providers, helping them manage patient care with ease and efficiency. Features include:
+
+* **Patient Management:** Doctors can view their assigned patients, including details about medical history, current conditions, and scheduled treatments.
+
+* **Prescribing Medicines:** Doctors can prescribe medicines, specifying dosage and timing, to ensure that patients receive the right medications in the correct amounts.
+---
+
 
 ### 🖥️ Back Desk Operator
+![image](https://github.com/user-attachments/assets/1c2eb1a0-703d-4db0-b38b-d48bd8ea4d6b)
 
-* Adds and manages:
 
-  * Vitals (pulse, temperature, blood pressure)
-  * Prescribed medicines
-  * Test records (with result links and dates)
-  * Patient room numbers
-* Finalizes and completes patient schedules
+The Back Desk Operator manages the administrative and logistical aspects of patient care. This role ensures that all medical data is recorded, monitored, and properly managed. Key responsibilities include:
+
+* **Vitals Management:** The back desk operator tracks and manages vital signs such as pulse, blood pressure, and temperature, ensuring that these measurements are properly recorded for each patient.
+
+* **Medicine Management:** They oversee the addition of prescribed medicines to the system, keeping track of medications given to patients, along with their dosage and timing.
+
+* **Test Records:** The operator adds and manages test results, including uploading test results with dates and direct links to results, ensuring that they are accessible for doctors and patients.
+
+* **Room Allocation:** The back desk operator assigns rooms to patients, ensuring they are placed in appropriate locations based on their treatment and needs.
+
+* **Finalizing Patient Schedules:** The operator is responsible for completing patient schedules and managing all necessary administrative work to finalize treatment and appointments.
 
 ---
 
@@ -129,8 +145,8 @@ These APIs return structured JSON including:
 
 ## 👥 Contributors
 
-* [Your Name](https://github.com/your-username)
-* [Collaborator's Name](https://github.com/collaborator-username)
+* [Mangipudi Vamsi Praneeth](https://github.com/Praneeth2025)
+* [Pranav Tanguturu](https://github.com/PRANAVTANGUTURU123)
 
 > Add your collaborators using GitHub's **Settings > Collaborators** feature
 

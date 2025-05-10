@@ -19,7 +19,7 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://hospital-management-system-backend.onrender.com/api/login", {
+      const response = await axios.post("https://hopsital-management-system-backend.onrender.com/api/login", {
         email: form.email,
         password: form.password,
         role: form.role, // 👈 include role if backend accepts it

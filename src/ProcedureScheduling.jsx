@@ -13,7 +13,7 @@ const TestUpdate = () => {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const res = await axios.get("https://hospital-management-system-backend.onrender.com/tests/patients");
+        const res = await axios.get("https://hopsital-management-system-backend.onrender.com/tests/patients");
         setTestPatients(res.data);
       } catch (err) {
         console.error("Error fetching test patients:", err);

@@ -22,7 +22,7 @@ export default function Signin({ onLogin }) {
 
     try {
       // Make API call to authenticate user
-      const response = await axios.post("https://hospital-management-system-backend.onrender.com/api/login", {
+      const response = await axios.post("https://hopsital-management-system-backend.onrender.com/api/login", {
         email: form.email,
         password: form.password,
         role: form.role, // Ensure the backend accepts and validates this

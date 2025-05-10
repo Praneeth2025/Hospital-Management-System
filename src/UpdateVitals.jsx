@@ -13,7 +13,7 @@ const UpdateVitals = () => {
   useEffect(() => {
     const fetchOccupiedRooms = async () => {
       try {
-        const res = await axios.get("https://hospital-management-system-backend.onrender.com/rooms/occupied");
+        const res = await axios.get("https://hopsital-management-system-backend.onrender.com/rooms/occupied");
         setOccupiedRooms(res.data);
       } catch (err) {
         console.error("Error fetching rooms:", err);

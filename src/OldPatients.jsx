@@ -10,7 +10,7 @@ const OldPatients = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://hospital-management-system-backend.onrender.com/schedules/completed");
+        const response = await axios.get("https://hopsital-management-system-backend.onrender.com/schedules/completed");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

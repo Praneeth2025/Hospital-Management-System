@@ -45,7 +45,7 @@ function Appointment() {
     const fetchDoctors = async () => {
       setLoading(true);
       try {
-        const res = await fetch("https://hospital-management-system-backend.onrender.com/api/doctors", {
+        const res = await fetch("https://hopsital-management-system-backend.onrender.com/api/doctors", {
           headers: { "Cache-Control": "no-cache" },
         });
 
@@ -84,7 +84,7 @@ function Appointment() {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://hospital-management-system-backend.onrender.com/api/appointments", {
+      const res = await fetch("https://hopsital-management-system-backend.onrender.com/api/appointments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

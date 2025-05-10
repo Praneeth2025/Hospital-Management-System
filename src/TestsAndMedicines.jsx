@@ -18,9 +18,9 @@ const TestsAndMedicines = () => {
     const fetchData = async () => {
       try {
         const [schedulesRes, medicinesRes, testsRes] = await Promise.all([
-          axios.get("https://hospital-management-system-backend.onrender.com/schedules/completed"),
-          axios.get("https://hospital-management-system-backend.onrender.com/medicines"),
-          axios.get("https://hospital-management-system-backend.onrender.com/tests"),
+          axios.get("https://hopsital-management-system-backend.onrender.com/schedules/completed"),
+          axios.get("https://hopsital-management-system-backend.onrender.com/medicines"),
+          axios.get("https://hopsital-management-system-backend.onrender.com/tests"),
         ]);
         setSchedules(schedulesRes.data);
         setMedicines(medicinesRes.data);

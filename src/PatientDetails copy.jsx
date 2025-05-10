@@ -9,7 +9,7 @@ const PatientDetails = () => {
   useEffect(() => {
     const fetchPatientDetails = async () => {
       try {
-        const response = await fetch(`https://hospital-management-system-backend.onrender.com/api/patients/${patientId}`, {
+        const response = await fetch(`https://hopsital-management-system-backend.onrender.com/api/patients/${patientId}`, {
           method: 'GET',
           cache: 'no-store'
         });

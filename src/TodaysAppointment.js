@@ -16,7 +16,7 @@ const TodaysAppointment = () => {
   useEffect(() => {
     const fetchClinicData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/schedules/checkup");
+        const response = await axios.get("https://hopsital-management-system-backend.onrender.com/schedules/checkup");
         setClinicData(response.data);
       } catch (error) {
         console.error("Error fetching clinic data:", error);
@@ -36,7 +36,7 @@ const TodaysAppointment = () => {
     const patientIdsToUpdate = Object.keys(checkedRows).filter((id) => checkedRows[id]);
 
     try {
-      const response = await axios.post("http://localhost:3000/schedules/turn-in", {
+      const response = await axios.post("https://hopsital-management-system-backend.onrender.com/schedules/turn-in", {
         patient_ids: patientIdsToUpdate,
       });
 
@@ -54,7 +54,7 @@ const TodaysAppointment = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3000/schedules/${selectedPatientId}`);
+      await axios.delete(`https://hopsital-management-system-backend.onrender.com/schedules/${selectedPatientId}`);
       setClinicData((prev) => prev.filter((row) => row.patient_id !== selectedPatientId));
       setShowDeleteModal(false);
       setSelectedPatientId(null);

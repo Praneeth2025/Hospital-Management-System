@@ -135,7 +135,7 @@ Use the following login credentials to test each role in the system:
 * [Mangipudi Vamsi Praneeth](https://github.com/Praneeth2025)
 * [Pranav Tanguturu](https://github.com/PRANAVTANGUTURU123)
 * [Madhasani Chandra Shekara Reddy](https://github.com/mcsr14724)
-* [Kondeti Aravind](https://github.com/mcsr14724)
+* [Kondeti Aravind](https://github.com/KondetiAravind)
 
 ---
 

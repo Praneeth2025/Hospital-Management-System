@@ -13,9 +13,7 @@ A full-stack **Hospital Management System** web application built to streamline 
   * [Front Desk Operator](#front-desk-operator)
   * [Doctor Panel](#doctor-panel)
   * [Back Desk Operator](#back-desk-operator)
-* [UI Previews](#ui-previews)
 * [Setup Instructions](#setup-instructions)
-* [API Endpoints](#api-endpoints)
 * [Contributors](#contributors)
 * [License](#license)
 
@@ -119,42 +117,17 @@ Here’s a glimpse of some key components:
 
 ---
 
-## 🔌 API Endpoints Used
-
-### Completed Schedules (Front Desk)
-
-```
-GET /schedules/completed
-```
-
-### Patient Details (Doctor/Back Desk)
-
-```
-GET /api/patients/:patientId
-```
-
-These APIs return structured JSON including:
-
-* Patient demographics
-* Medical history
-* Prescribed medicine and dosage
-* Test details with result links
-* Vital signs and monitoring time
-
----
-
 ## 👥 Contributors
 
 * [Mangipudi Vamsi Praneeth](https://github.com/Praneeth2025)
 * [Pranav Tanguturu](https://github.com/PRANAVTANGUTURU123)
+* [Madhasani Chandra Shekara Reddy](https://github.com/mcsr14724)
+* [Kondeti Aravind](https://github.com/mcsr14724)
 
-> Add your collaborators using GitHub's **Settings > Collaborators** feature
 
 ---
 
 ## 📄 License
-
-This project is licensed under the [MIT License](LICENSE). You are free to use, distribute, and modify it under the terms of the license.
 
 ---
 
